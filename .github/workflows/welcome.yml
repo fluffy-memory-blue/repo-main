@@ -1,4 +1,4 @@
-name: Post welcome comment
+name: Update submodules with the listed PRs
 on:
   pull_request:
     types: [opened]
