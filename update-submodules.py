@@ -2,10 +2,12 @@
 
 import json
 import os
+import sys
 import logging
 import shlex
 from subprocess import check_output
 
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 log = logging.getLogger('main')
 
 MAIN_PR_URL= os.getenv('PR_URL')
