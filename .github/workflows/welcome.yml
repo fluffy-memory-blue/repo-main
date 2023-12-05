@@ -1,7 +1,7 @@
-name: Post welcome comment
+name: Update submodules with the listed PRs
 on:
   pull_request:
-    types: [opened]
+    types: [opened, edited]
 permissions:
   pull-requests: write
 jobs:
@@ -13,3 +13,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
+      - run: git submodules
+      - run: ./update-submodules.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+      - run: git submodules
