@@ -7,7 +7,7 @@ from subprocess import check_output
 
 log = logging.getLogger('main')
 
-MAIN_PR_URL='https://github.com/fluffy-memory-blue/repo-main/pull/1'
+MAIN_PR_URL= os.getenv('PR_URL')
 cmd_ = f"gh pr view {MAIN_PR_URL} --json body,comments"
 cmd = shlex.split(cmd_)
 
