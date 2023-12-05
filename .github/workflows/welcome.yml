@@ -13,9 +13,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
-      - run: git submodules
+      - run: git submodule
       - run: ./update-submodules.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
-      - run: git submodules
+      - run: git submodule
