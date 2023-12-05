@@ -1,0 +1,9 @@
+[submodule "repo1"]
+	path = repo1
+	url = git@github.com:fluffy-memory-blue/repo1.git
+[submodule "repo2"]
+	path = repo2
+	url = git@github.com:fluffy-memory-blue/repo2.git
+[submodule "repo3"]
+	path = repo3
+	url = git@github.com:fluffy-memory-blue/repo3.git
